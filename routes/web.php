@@ -26,4 +26,6 @@ Route::get('/', function () {
 
 Route::get('/etudiant', [EtudiantController::class,'index']);
 Route::get('/alf',[alfController::class,'index2']);
-Route::get('/produit',[ProduitController::class,'index']);
+Route::get('/produit',[ProduitController::class,'index'])->name('list_produit');
+Route::get('/add_produit',[ProduitController::class,'add'])->name('form_produit');
+Route::post('/add_produit',[ProduitController::class,'save'])->name('add_produit');

@@ -11,6 +11,9 @@
     <title>Hello, world!</title>
   </head>
   <body>
+    @if(session('message'))
+    <div class="alert alert-success">{{session('message')}}</div>
+    @endif
     <h1>liste des produits</h1>
     <table class="table table-bordered col-8 offset-2">
         <tr>
