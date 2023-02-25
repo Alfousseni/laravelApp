@@ -21,6 +21,7 @@
             <th>Nom</th>
             <th>Quantite</th>
             <th>Prix</th>
+            <th>Categorie</th>
         </tr>
         @foreach($produits as $produit)
 
@@ -29,6 +30,9 @@
             <td>{{ $produit->nom }}</td>
             <td>{{ $produit->quantite }}</td>
             <td>{{ $produit->prix }}</td>
+            <td>{{ $produit->categorie->nom }}</td>
+            <td><a href="{{route('delete_produit',$produit->id)}}" class="btn btn-danger">supprimer</a></td>
+            <td><a href="{{route('edite_produit',$produit->id)}}" class="btn btn-info">modifier</a></td>
         </tr>
         @endforeach
     </table>
